@@ -1,0 +1,73 @@
+[System]
+Name='ASD_Social'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Values'
+Range=[0 10]
+NumMFs=3
+MF1='Low':'trimf',[-4 0 5]
+MF2='Moderate':'trimf',[0 5 10]
+MF3='Good':'trimf',[5 10 14]
+
+[Input2]
+Name='RelationAlertness'
+Range=[0 10]
+NumMFs=3
+MF1='Low':'trimf',[-4 0 5]
+MF2='Moderate':'trimf',[0 5 10]
+MF3='Good':'trimf',[5 10 14]
+
+[Input3]
+Name='Behaviour'
+Range=[0 10]
+NumMFs=3
+MF1='Low':'trimf',[-4 0 5]
+MF2='Moderate':'trimf',[0 5 10]
+MF3='Good':'trimf',[5 10 14]
+
+[Output1]
+Name='Out_verb'
+Range=[0 10]
+NumMFs=3
+MF1='Low':'trimf',[-4 0 5]
+MF2='Moderate':'trimf',[0 5 10]
+MF3='Good':'trimf',[5 10 14]
+
+[Rules]
+1 1 1, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 1 3, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 2, 2 (1) : 1
+1 2 3, 2 (1) : 1
+1 3 1, 1 (1) : 1
+1 3 2, 2 (1) : 1
+1 3 3, 3 (1) : 1
+2 2 1, 2 (1) : 1
+2 2 2, 2 (1) : 1
+2 2 3, 3 (1) : 1
+2 3 1, 2 (1) : 1
+2 3 2, 3 (1) : 1
+2 3 3, 3 (1) : 1
+3 1 1, 1 (1) : 1
+3 1 2, 2 (1) : 1
+3 1 3, 3 (1) : 1
+3 2 1, 2 (1) : 1
+3 2 2, 3 (1) : 1
+3 2 3, 3 (1) : 1
+3 3 1, 3 (1) : 1
+3 3 2, 3 (1) : 1
+3 3 3, 3 (1) : 1
+2 1 1, 1 (1) : 1
+2 1 2, 2 (1) : 1
+2 1 3, 2 (1) : 1
